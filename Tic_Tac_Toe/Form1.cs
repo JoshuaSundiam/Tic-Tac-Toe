@@ -19,7 +19,7 @@ namespace Tic_Tac_Toe
                 b1.Text = "O";
             turn = !turn;
             b1.Enabled = false;
-
+            CheckingForWinner();
         }
 
         private void b2_Click(object sender, EventArgs e)
@@ -31,7 +31,7 @@ namespace Tic_Tac_Toe
                 b2.Text = "O";
             turn = !turn;
             b2.Enabled = false;
-
+            CheckingForWinner();
         }
 
         private void b3_Click(object sender, EventArgs e)
@@ -43,7 +43,7 @@ namespace Tic_Tac_Toe
                 b3.Text = "O";
             turn = !turn;
             b3.Enabled = false;
-
+            CheckingForWinner();
         }
 
         private void b4_Click(object sender, EventArgs e)
@@ -55,7 +55,7 @@ namespace Tic_Tac_Toe
                 b4.Text = "O";
             turn = !turn;
             b4.Enabled = false;
-
+            CheckingForWinner();
         }
 
         private void b5_Click(object sender, EventArgs e)
@@ -67,7 +67,7 @@ namespace Tic_Tac_Toe
                 b5.Text = "O";
             turn = !turn;
             b5.Enabled = false;
-
+            CheckingForWinner();
         }
 
         private void b6_Click(object sender, EventArgs e)
@@ -79,7 +79,7 @@ namespace Tic_Tac_Toe
                 b6.Text = "O";
             turn = !turn;
             b6.Enabled = false;
-
+            CheckingForWinner();
         }
 
         private void b7_Click(object sender, EventArgs e)
@@ -91,7 +91,7 @@ namespace Tic_Tac_Toe
                 b7.Text = "O";
             turn = !turn;
             b7.Enabled = false;
-
+            CheckingForWinner();
         }
 
         private void b8_Click(object sender, EventArgs e)
@@ -103,7 +103,7 @@ namespace Tic_Tac_Toe
                 b8.Text = "O";
             turn = !turn;
             b8.Enabled = false;
-
+            CheckingForWinner();
         }
 
         private void b9_Click(object sender, EventArgs e)
@@ -115,7 +115,7 @@ namespace Tic_Tac_Toe
                 b9.Text = "O";
             turn = !turn;
             b9.Enabled = false;
-
+            CheckingForWinner();
         }
         private void CheckingForWinner()
         {
@@ -140,7 +140,24 @@ namespace Tic_Tac_Toe
             else if ((b3.Text == b5.Text) && (b5.Text == b7.Text) && (!b3.Enabled))
                 There_is_a_winner = true;
 
+        if (There_is_a_winner)
+            {
+                
+                string winner = "";
+                if (turn)
+                    winner = "O";
+                else
+                    winner = "X";
+                MessageBox.Show(winner + "wins");
 
+            }
+            else
+            {
+                if (turn_count == 9)
+                    MessageBox.Show("Its a draw");
+
+            }
         }
+
     }
 }
