@@ -158,6 +158,35 @@ namespace Tic_Tac_Toe
 
             }
         }
+        private void disableButtons()
+        {
+            try
+            {
+                foreach (Control c in Controls)
+                {
+                    Button b1 = (Button)c;
+                    b1.Enabled = false;
+                    Button b2 = (Button)c;
+                    b2.Enabled = false;
+                    Button b3 = (Button)c;
+                    b3.Enabled = false;
+                    Button b4 = (Button)c;
+                    b4.Enabled = false;
+                    Button b5 = (Button)c;
+                    b5.Enabled = false;
+                    Button b6 = (Button)c;
+                    b6.Enabled = false;
+                    Button b7 = (Button)c;
+                    b7.Enabled = false;
+                    Button b8 = (Button)c;
+                    b8.Enabled = false;
+                    Button b9 = (Button)c;
+                    b9.Enabled = false;
+                }
+            }
+            catch { }
+        }
+
 
     }
 }
