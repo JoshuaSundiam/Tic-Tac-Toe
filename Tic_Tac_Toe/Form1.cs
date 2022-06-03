@@ -117,5 +117,30 @@ namespace Tic_Tac_Toe
             b9.Enabled = false;
 
         }
+        private void CheckingForWinner()
+        {
+            Boolean There_is_a_winner = false;
+
+            if ((b1.Text == b2.Text) && (b2.Text == b3.Text) && (!b1.Enabled))
+                There_is_a_winner = true;
+            else if ((b4.Text == b5.Text) && (b5.Text == b6.Text) && (!b4.Enabled))
+                There_is_a_winner = true;
+            else if ((b7.Text == b8.Text) && (b8.Text == b9.Text) && (!b7.Enabled))
+                There_is_a_winner = true;
+
+            else if ((b1.Text == b4.Text) && (b4.Text == b7.Text) && (!b1.Enabled))
+                There_is_a_winner = true;
+            else if ((b2.Text == b5.Text) && (b5.Text == b8.Text) && (!b2.Enabled))
+                There_is_a_winner = true;
+            else if ((b3.Text == b6.Text) && (b6.Text == b9.Text) && (!b3.Enabled))
+                There_is_a_winner = true;
+
+            else if ((b1.Text == b5.Text) && (b5.Text == b9.Text) && (!b1.Enabled))
+                There_is_a_winner = true;
+            else if ((b3.Text == b5.Text) && (b5.Text == b7.Text) && (!b3.Enabled))
+                There_is_a_winner = true;
+
+
+        }
     }
 }
