@@ -38,6 +38,7 @@
             this.b7 = new System.Windows.Forms.Button();
             this.b8 = new System.Windows.Forms.Button();
             this.b9 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // b1
@@ -151,12 +152,25 @@
             this.b9.UseVisualStyleBackColor = false;
             this.b9.Click += new System.EventHandler(this.b9_Click);
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button1.Font = new System.Drawing.Font("Stencil", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(691, 650);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(234, 58);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "New Game";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Tic_Tac_Toe.Properties.Resources.images;
             this.ClientSize = new System.Drawing.Size(969, 732);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.b9);
             this.Controls.Add(this.b8);
             this.Controls.Add(this.b7);
@@ -168,7 +182,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.b1);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Tic Tac Toe";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,5 +200,6 @@
         private Button b7;
         private Button b8;
         private Button b9;
+        private Button button1;
     }
 }

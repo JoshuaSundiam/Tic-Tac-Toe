@@ -19,6 +19,7 @@ namespace Tic_Tac_Toe
                 b1.Text = "O";
             turn = !turn;
             b1.Enabled = false;
+            turn_count++;
             CheckingForWinner();
         }
 
@@ -31,6 +32,7 @@ namespace Tic_Tac_Toe
                 b2.Text = "O";
             turn = !turn;
             b2.Enabled = false;
+            turn_count++;
             CheckingForWinner();
         }
 
@@ -43,6 +45,7 @@ namespace Tic_Tac_Toe
                 b3.Text = "O";
             turn = !turn;
             b3.Enabled = false;
+            turn_count++;
             CheckingForWinner();
         }
 
@@ -55,6 +58,7 @@ namespace Tic_Tac_Toe
                 b4.Text = "O";
             turn = !turn;
             b4.Enabled = false;
+            turn_count++;
             CheckingForWinner();
         }
 
@@ -67,6 +71,7 @@ namespace Tic_Tac_Toe
                 b5.Text = "O";
             turn = !turn;
             b5.Enabled = false;
+            turn_count++;
             CheckingForWinner();
         }
 
@@ -79,6 +84,7 @@ namespace Tic_Tac_Toe
                 b6.Text = "O";
             turn = !turn;
             b6.Enabled = false;
+            turn_count++;
             CheckingForWinner();
         }
 
@@ -91,6 +97,7 @@ namespace Tic_Tac_Toe
                 b7.Text = "O";
             turn = !turn;
             b7.Enabled = false;
+            turn_count++;
             CheckingForWinner();
         }
 
@@ -103,6 +110,7 @@ namespace Tic_Tac_Toe
                 b8.Text = "O";
             turn = !turn;
             b8.Enabled = false;
+            turn_count++;
             CheckingForWinner();
         }
 
@@ -115,6 +123,7 @@ namespace Tic_Tac_Toe
                 b9.Text = "O";
             turn = !turn;
             b9.Enabled = false;
+            turn_count++;
             CheckingForWinner();
         }
         private void CheckingForWinner()
@@ -140,9 +149,9 @@ namespace Tic_Tac_Toe
             else if ((b3.Text == b5.Text) && (b5.Text == b7.Text) && (!b3.Enabled))
                 There_is_a_winner = true;
 
-        if (There_is_a_winner)
+            if (There_is_a_winner)
             {
-                
+                disableButtons();
                 string winner = "";
                 if (turn)
                     winner = "O";
@@ -187,6 +196,38 @@ namespace Tic_Tac_Toe
             catch { }
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Boolean There_is_a_winner = true;
+            if (There_is_a_winner)
+            {
+                b1.Enabled = true;
+                b1.Text = "";
 
+                b2.Enabled = true;
+                b2.Text = "";
+
+                b3.Enabled = true;
+                b3.Text = "";
+
+                b4.Enabled = true;
+                b4.Text = "";
+
+                b5.Enabled = true;
+                b5.Text = "";
+
+                b6.Enabled = true;
+                b6.Text = "";
+
+                b7.Enabled = true;
+                b7.Text = "";
+
+                b8.Enabled = true;
+                b8.Text = "";
+
+                b9.Enabled = true;
+
+            }
+        }
     }
 }
